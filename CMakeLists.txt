@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.10)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+project(Connect4 VERSION 1.0)
+file(GLOB_RECURSE SRC_FILES src/*.c)
+add_executable(Connect4 core.c ${SRC_FILES})
+target_include_directories(Connect4 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/functions.h)
