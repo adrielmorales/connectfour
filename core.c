@@ -1,5 +1,12 @@
 #include <stdio.h>
+#ifdef _WIN32
+#include <Windows.h>
 #include "src\functions.h"
+#else
+#include <string.h>
+#include "src/functions.h"
+#endif
+
 
 int main() {
     printf("Welcome to Connect 4\n");
